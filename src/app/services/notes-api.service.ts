@@ -8,7 +8,7 @@ import {Note} from '../interfaces/interfaces';
 })
 export class NotesApiService {
 
-  NOTES_BASE_URL = 'http://localhost:3000/notes';
+  NOTES_BASE_URL = 'http://localhost:3001/notes';
 
   constructor(private http: HttpClient) { }
 

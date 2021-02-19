@@ -5,17 +5,20 @@ import { FooterComponent } from './footer/footer.component';
 import { LoginComponent } from './login/login.component';
 import { RegistrationComponent } from './registration/registration.component';
 import {ReactiveFormsModule} from '@angular/forms';
+import {RouterModule} from '@angular/router';
 
 
 
 @NgModule({
     declarations: [NavbarComponent, FooterComponent, LoginComponent, RegistrationComponent],
-    exports: [
-        NavbarComponent
-    ],
+  exports: [
+    NavbarComponent,
+    FooterComponent
+  ],
     imports: [
         CommonModule,
-        ReactiveFormsModule
+        ReactiveFormsModule,
+        RouterModule
     ]
 })
 export class SharedModule { }

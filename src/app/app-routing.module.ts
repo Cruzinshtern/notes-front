@@ -5,11 +5,12 @@ import {UsersComponent} from './components/users/users.component';
 import {NotesComponent} from './components/notes/notes.component';
 import {LoginComponent} from './shared/login/login.component';
 import {RegistrationComponent} from './shared/registration/registration.component';
+import {AuthGuardService} from './services/auth-guard.service';
 
 const routes: Routes = [
-  { path: '', component: HomepageComponent },
-  { path: 'users', component: UsersComponent },
-  { path: 'notes', component: NotesComponent },
+  { path: '', component: HomepageComponent, canActivate: [AuthGuardService] },
+  { path: 'users', component: UsersComponent, canActivate: [AuthGuardService] },
+  { path: 'notes', component: NotesComponent, canActivate: [AuthGuardService] },
   { path: 'login', component: LoginComponent },
   { path: 'registration', component: RegistrationComponent },
 ];
