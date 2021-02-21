@@ -1,1 +1,13 @@
-<p>users works!</p>
+<div>
+  <table>
+    <tr>
+      <th>Title</th>
+      <th>Text</th>
+    </tr>
+    <tr *ngFor="let user of userList">
+      <td>{{user.name}}</td>
+      <td>{{user.email}}</td>
+    </tr>
+  </table>
+</div>
+
