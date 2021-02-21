@@ -7,10 +7,20 @@ import { ComponentsModule} from './components/components.module';
 import { SharedModule } from './shared/shared.module';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClientModule } from '@angular/common/http';
+import {MatDialogModule} from '@angular/material/dialog';
+import { LogoutConfirmComponent } from './modals/logout-confirm/logout-confirm.component';
+import { NoteFormComponent } from './forms/note-form/note-form.component';
+import {ReactiveFormsModule} from '@angular/forms';
+import { NoteDeleteConfirmComponent } from './modals/note-delete-confirm/note-delete-confirm.component';
+import { NoteEditConfirmComponent } from './modals/note-edit-confirm/note-edit-confirm.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    LogoutConfirmComponent,
+    NoteFormComponent,
+    NoteDeleteConfirmComponent,
+    NoteEditConfirmComponent
   ],
   imports: [
     BrowserModule,
@@ -18,7 +28,9 @@ import { HttpClientModule } from '@angular/common/http';
     AppRoutingModule,
     ComponentsModule,
     SharedModule,
-    NoopAnimationsModule
+    NoopAnimationsModule,
+    MatDialogModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

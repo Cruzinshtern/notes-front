@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {AuthApiService} from '../../services/auth-api.service';
+import {MatDialog} from '@angular/material/dialog';
+import {LogoutConfirmComponent} from '../../modals/logout-confirm/logout-confirm.component';
 
 @Component({
   selector: 'app-footer',
@@ -9,13 +11,14 @@ import {AuthApiService} from '../../services/auth-api.service';
 export class FooterComponent implements OnInit {
 
   constructor(
-    private authApiService: AuthApiService
+    public authApiService: AuthApiService,
+    private dialog: MatDialog,
   ) { }
 
   ngOnInit(): void {
   }
 
-  onClick(): void {
-    this.authApiService.logout();
+  openDialog(): void {
+    this.dialog.open(LogoutConfirmComponent);
   }
 }

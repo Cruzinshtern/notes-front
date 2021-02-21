@@ -7,6 +7,8 @@
     <tr *ngFor="let note of notesList">
       <td>{{note.title}}</td>
       <td>{{note.text}}</td>
+      <td><button (click)="onEditClick(note)">Edit</button></td>
+      <td><button (click)="onDeleteClick(note)">Delete</button></td>
     </tr>
   </table>
 </div>
