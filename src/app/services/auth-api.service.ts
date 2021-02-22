@@ -18,7 +18,7 @@ export class AuthApiService {
     private router: Router,
   ) { }
 
-  public getToken() {
+  public getToken(): string {
     return localStorage.getItem('token');
   }
 
